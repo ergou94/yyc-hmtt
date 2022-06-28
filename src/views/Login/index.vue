@@ -1,6 +1,6 @@
 <template>
   <div>
-    <van-nav-bar title="登录">
+    <van-nav-bar title="登录" @click-left='$router.back()'>
       <template #left>
         <van-icon name="cross" />
       </template>
@@ -85,6 +85,8 @@ export default {
       try {
         const res = await login(values)
         this.$store.commit('SetUser', res.data.data)
+        this.$toast.success('登陆成功')
+        this.$router.replace('my')
       } catch (err) {
         this.$toast.fail('登录失败')
       }

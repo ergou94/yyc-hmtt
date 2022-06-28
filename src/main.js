@@ -5,8 +5,8 @@ import store from './store'
 import Vant, { Form, Field } from 'vant'
 import 'vant/lib/index.less'
 import 'amfe-flexible'
-import '@/styles/reset.css'
-import '@/styles/icon.less'
+import 'postcss-pxtorem'
+import '@/styles/index.less'
 
 Vue.use(Form)
 Vue.use(Field)

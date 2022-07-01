@@ -86,7 +86,7 @@ export default {
   methods: {
     async loginout () {
       try {
-        this.$dialog.confirm({
+        await this.$dialog.confirm({
           message: '确认退出吗'
         })
         this.$store.commit('SetUser', {})
@@ -200,5 +200,9 @@ body {
 }
 .logout {
   color: #d86262;
+}
+.header_out .my_icon p{
+  margin-top:15px;
+  font-size: 27px;
 }
 </style>

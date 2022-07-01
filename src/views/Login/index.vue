@@ -86,7 +86,7 @@ export default {
         const res = await login(values)
         this.$store.commit('SetUser', res.data.data)
         this.$toast.success('登陆成功')
-        this.$router.replace('my')
+        this.$router.push('my')
       } catch (err) {
         this.$toast.fail('登录失败')
       }

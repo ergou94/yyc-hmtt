@@ -148,4 +148,5 @@ acronym {
 }
 html {
   background-color: #f5f7f9;
+  overflow: hidden;
 }

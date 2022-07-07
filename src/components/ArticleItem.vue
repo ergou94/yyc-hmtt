@@ -1,5 +1,10 @@
 <template>
-  <van-cell class="article-item">
+  <van-cell
+    class="article-item"
+    @click="
+      $router.push({ name: 'article', params: { article_id: article.art_id } })
+    "
+  >
     <div slot="title" class="title van-multi-ellipsis--l2">
       {{ article.title }}
     </div>
@@ -30,6 +35,7 @@
 </template>
 
 <script>
+
 export default {
   name: 'ArticleItem',
   components: {},
@@ -40,7 +46,9 @@ export default {
     }
   },
   data () {
-    return {}
+    return {
+      articleList: {}
+    }
   },
   computed: {},
   watch: {},

@@ -12,7 +12,7 @@
           />
           <span>{{ userInfo.name }}</span>
         </div>
-        <div class="button">编辑资料</div>
+        <div class="button" @click="$router.push('/user')">编辑资料</div>
       </div>
       <div>
         <ul class="list">
@@ -201,8 +201,8 @@ body {
 .logout {
   color: #d86262;
 }
-.header_out .my_icon p{
-  margin-top:15px;
+.header_out .my_icon p {
+  margin-top: 15px;
   font-size: 27px;
 }
 </style>

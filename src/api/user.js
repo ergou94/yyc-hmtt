@@ -20,3 +20,24 @@ export const getUserInfo = () => {
     url: 'user'
   })
 }
+export const getUserProfile = () => {
+  return requset({
+    url: '/user/profile'
+  })
+}
+export const updateUserProfile = (profile) => {
+  return requset({
+    method: 'patch',
+    url: '/user/profile',
+    data:
+      profile
+
+  })
+}
+export const updateUserAvatar = (data) => {
+  return requset({
+    method: 'patch',
+    url: '/user/photo',
+    data
+  })
+}

@@ -73,7 +73,7 @@ export default {
   created () { },
   data () {
     return {
-      mobile: '13911111111',
+      mobile: '15558086596',
       code: '246810',
       time: 60 * 1000,
       istime: false
@@ -86,7 +86,7 @@ export default {
         const res = await login(values)
         this.$store.commit('SetUser', res.data.data)
         this.$toast.success('登陆成功')
-        this.$router.push('my')
+        this.$router.go(-1)
       } catch (err) {
         this.$toast.fail('登录失败')
       }
